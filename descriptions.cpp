@@ -15,8 +15,8 @@ vector<string> algorithmNames = {
     "Intro", "Cycle", "Tim", "Iterative Merge", "Naive In-Place Merge", "Weave", "Iterative Weave", "Rotate Merge", "Block", "Wiki", "Grail", "Weak Heap",
     "Smooth", "Poplar Heap", "Binary Quick", "Pancake", "Cocktail Shaker", "Odd-Even", "Circle", "Merge-Insertion", "Tree", "Tournament", "Stable Tournament", "Gnome", "Library",
     "Strand", "Patience", "Bitonic", "Bitonic Network", "Pairwise Network",
-    "Spread", "Flash", "Bead (Gravity)", "Spaghetti", "Ska",
-    "Stooge", "Bogo"
+    "Spread", "Flash", "Spaghetti", "Ska",
+    "Bead (Gravity)", "Stooge", "Bogo"
 
 };
 
@@ -187,15 +187,15 @@ vector<string> algorithmDescriptions = {
     // Flash
     "Create buckets corresponding to element value ranges. Insert all elements into buckets. Permute elements to approximately correct positions. Move elements back to original array. Use insertion to sort array.",
 
-    // Bead (Gravity)
-    "Create an array of beads with the number of beads in each row corresponding to the value of each element. Move all beads downwards. Add the beads in each row and fill each element of the original array with this sum.",
-
     // Spaghetti
     "Create a count of elements with each value from the minimum to the maximum value in the array. Remove the values from each count bucket in order and replace the original array values with them.",
 
     // Ska
     "For every digit within the element values, make buckets. Increment the buckets corresponding to this digit in every value. Compute the cumulative count for each bucket. Fill a temporary array with the bucket values at locations defined by the counts. Move all elements to the original array.",
 
+
+    // Bead (Gravity)
+    "Create an array of beads with the number of beads in each row corresponding to the value of each element. Move all beads downwards. Add the beads in each row and fill each element of the original array with this sum.",
 
     // Stooge
     "Starting from smaller subsections and working up to the full array, swap the left and right elements if needed.",
