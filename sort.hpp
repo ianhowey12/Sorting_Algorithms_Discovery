@@ -86,6 +86,8 @@ public:
 
     void quick_hoare(vector<int>& v, int n);
 
+    int partition_naive(vector<int>& v, int l, int r);
+
     void qui_naive(vector<int>& v, int l, int r);
 
     void quick_naive(vector<int>& v, int n);
@@ -98,6 +100,8 @@ public:
 
     void shell(vector<int>& v, int n);
 
+    void bogo(vector<int>& v, int n);
+
     void pigeonhole(vector<int>& v, int n);
 
     void counting(vector<int>& v, int n);
@@ -106,21 +110,25 @@ public:
 
     void bucket(vector<int>& v, int n, int N);
 
-    void radix_count(vector<int>& v, int n, int power, int b);
+    void lsd_count(vector<int>& v, int n, int power, int b);
 
-    void radix_lsd(vector<int>& v, int n, int b);
+    void lsd(vector<int>& v, int n, int b);
 
     int numDigits(int n, int b);
 
     int pow(int b, int e);
 
-    void radix_msd(vector<int>& v, int n, int b);
+    void msd_count(vector<int>& v, int left, int right, int digitPos, int b);
+
+    int msd_power(vector<int>& v, int n, int b);
+
+    void msd(vector<int>& v, int n, int b);
 
     void in_place_lsd(vector<int>& v, int n, int b);
 
-    int in_place_msd_digit(int number, int pos, int maxDigits, int b);
+    void in_place_msd_count(vector<int>& v, int l, int r, int digitPos, int b);
 
-    void in_place_msd_bucket(vector<int>& v, int start, int end, int pos, int maxDigits, int b);
+    int in_place_msd_power(vector<int>& v, int n, int b);
 
     void in_place_msd(vector<int>& v, int n, int b);
 
@@ -186,23 +194,25 @@ public:
 
     void iterative_block(vector<int>& v, int n);
 
-    bool wiki_pass(vector<int>& v, int n);
-
     void wiki(vector<int>& v, int n);
 
-    void grail_insert(vector<int>& v, int l, int r);
+    void grail_sub(vector<int>& v);
 
-    void grail_merge(vector<int>& v, int l, int m, int r);
+    void grail(vector<int>& v, int n);
 
-    void grail(vector<int>& v, int n, int k);
+    void stooge_sub(vector<int>& v, int l, int r);
+
+    void stooge(vector<int>& v, int n);
 
     void weak_heap_sift(vector<int>& v, int i, int n);
-
+    
     void weak_heap_build(vector<int>& v, int n);
 
     void weak_heap(vector<int>& v, int n);
+    
+    int leonardo(int k);
 
-    void smooth_build(vector<int>& v, int n, int i);
+    void build_heap(vector<int>& v, int l, int r);
 
     void smooth(vector<int>& v, int n);
 
@@ -228,9 +238,13 @@ public:
 
     void circle(vector<int>& v, int n);
 
-    void merge_insert_insert(vector<int>& v, int x);
+    void merge_insert_insertion(vector<int>& v, int p, int q);
 
-    void merge_insert(vector<int>& v, int n);
+    void merge_insert_merge(vector<int>& v, int l, int m, int r);
+
+    void merge_insert(vector<int>& v, int l, int r, int b);
+
+    void merge_insertion(vector<int>& v, int n, int b);
 
     Node* tree_insert(Node* root, int v);
 
@@ -264,23 +278,21 @@ public:
 
     void strand(vector<int>& v, int n);
 
-    vector<int> patience_merge(vector<vector<int>>& v);
+    void patience_merge(vector<int>& v, vector<vector<int>>& p);
 
     void patience(vector<int>& v, int n);
 
-    void bitonic_merge(vector<int>& v, int low, int n, bool dir);
-
-    void bitonic_sub(vector<int>& v, int low, int n, bool dir);
+    void bitonic_merge(vector<int>& v, int low, int count, bool dir);
+    
+    void bitonic_sort(vector<int>& v, int low, int count, bool dir);
 
     void bitonic(vector<int>& v, int n);
 
-    void bitonic_network_merge(vector<int>& v, int low, int count, bool dir);
+    void odd_even_mer(vector<int>& v, int l, int n, int r);
 
-    void bitonic_network_sort(vector<int>& v, int low, int count, bool dir);
+    void odd_even_sort(vector<int>& v, int l, int n);
 
-    void bitonic_network(vector<int>& v, int n);
-
-    void pairwise_network_swap(vector<int>& v, int i, int j);
+    void odd_even_merge(vector<int>& v, int n);
 
     void pairwise_network_merge(vector<int>& v, int l, int r);
 
@@ -296,17 +308,12 @@ public:
 
     void flash(vector<int>& v, int n, float b);
 
+    void bead(vector<int>& v, int n);
+
     void spaghetti(vector<int>& v, int n);
 
     void ska_digit(vector<int>& v, vector<int>& temp, int byte);
 
     void ska(vector<int>& v, int n);
 
-    void bead(vector<int>& v, int n);
-
-    void stooge_sub(vector<int>& v, int l, int r);
-
-    void stooge(vector<int>& v, int n);
-
-    void bogo(vector<int>& v, int n);
 };
